@@ -69,13 +69,13 @@ Partial Class frmMain
         Me.TableLayoutPanelMain.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanelMain.Name = "TableLayoutPanelMain"
         Me.TableLayoutPanelMain.RowCount = 7
-        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanelMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanelMain.Size = New System.Drawing.Size(800, 450)
         Me.TableLayoutPanelMain.TabIndex = 0
         '
@@ -88,7 +88,7 @@ Partial Class frmMain
         Me.TableLayoutPanelCommand.Controls.Add(Me.ButtonLoadGCode, 0, 0)
         Me.TableLayoutPanelCommand.Controls.Add(Me.ButtonSaveOpenScad, 1, 0)
         Me.TableLayoutPanelCommand.Controls.Add(Me.ButtonCreaSTL, 2, 0)
-        Me.TableLayoutPanelCommand.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanelCommand.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanelCommand.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanelCommand.Name = "TableLayoutPanelCommand"
         Me.TableLayoutPanelCommand.RowCount = 1
@@ -133,17 +133,17 @@ Partial Class frmMain
         Me.TextBoxGCode.Multiline = True
         Me.TextBoxGCode.Name = "TextBoxGCode"
         Me.TextBoxGCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBoxGCode.Size = New System.Drawing.Size(794, 139)
+        Me.TextBoxGCode.Size = New System.Drawing.Size(794, 140)
         Me.TextBoxGCode.TabIndex = 1
         '
         'TextBoxOpenScad
         '
         Me.TextBoxOpenScad.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxOpenScad.Location = New System.Drawing.Point(3, 188)
+        Me.TextBoxOpenScad.Location = New System.Drawing.Point(3, 189)
         Me.TextBoxOpenScad.Multiline = True
         Me.TextBoxOpenScad.Name = "TextBoxOpenScad"
         Me.TextBoxOpenScad.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBoxOpenScad.Size = New System.Drawing.Size(794, 139)
+        Me.TextBoxOpenScad.Size = New System.Drawing.Size(794, 140)
         Me.TextBoxOpenScad.TabIndex = 2
         '
         'ProgressBarStato
@@ -159,9 +159,9 @@ Partial Class frmMain
         '
         Me.LabelLog.AutoSize = True
         Me.LabelLog.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LabelLog.Location = New System.Drawing.Point(3, 330)
+        Me.LabelLog.Location = New System.Drawing.Point(3, 332)
         Me.LabelLog.Name = "LabelLog"
-        Me.LabelLog.Size = New System.Drawing.Size(794, 30)
+        Me.LabelLog.Size = New System.Drawing.Size(794, 13)
         Me.LabelLog.TabIndex = 4
         Me.LabelLog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -197,13 +197,13 @@ Partial Class frmMain
         Me.TableLayoutPanelSetup.Controls.Add(Me.NumericUpDownUgello, 1, 0)
         Me.TableLayoutPanelSetup.Controls.Add(Me.Label4, 8, 0)
         Me.TableLayoutPanelSetup.Controls.Add(Me.NumericUpDownIgnoraSegmenti, 9, 0)
-        Me.TableLayoutPanelSetup.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanelSetup.Location = New System.Drawing.Point(0, 360)
+        Me.TableLayoutPanelSetup.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanelSetup.Location = New System.Drawing.Point(0, 345)
         Me.TableLayoutPanelSetup.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanelSetup.Name = "TableLayoutPanelSetup"
         Me.TableLayoutPanelSetup.RowCount = 1
         Me.TableLayoutPanelSetup.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanelSetup.Size = New System.Drawing.Size(800, 30)
+        Me.TableLayoutPanelSetup.Size = New System.Drawing.Size(800, 45)
         Me.TableLayoutPanelSetup.TabIndex = 10
         '
         'NumericUpDownProcessi
@@ -226,7 +226,7 @@ Partial Class frmMain
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(163, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 39)
+        Me.Label1.Size = New System.Drawing.Size(74, 45)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Processi OpenSCAD simultanei:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -237,7 +237,7 @@ Partial Class frmMain
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label2.Location = New System.Drawing.Point(323, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 39)
+        Me.Label2.Size = New System.Drawing.Size(74, 45)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Numero di segmenti in ogni STL :"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -262,7 +262,7 @@ Partial Class frmMain
         Me.CheckBoxConservaSCAD.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CheckBoxConservaSCAD.Location = New System.Drawing.Point(483, 3)
         Me.CheckBoxConservaSCAD.Name = "CheckBoxConservaSCAD"
-        Me.CheckBoxConservaSCAD.Size = New System.Drawing.Size(74, 33)
+        Me.CheckBoxConservaSCAD.Size = New System.Drawing.Size(74, 39)
         Me.CheckBoxConservaSCAD.TabIndex = 4
         Me.CheckBoxConservaSCAD.Text = "Conserva File SCAD"
         Me.CheckBoxConservaSCAD.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -275,7 +275,7 @@ Partial Class frmMain
         Me.CheckBoxConservaSTL.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CheckBoxConservaSTL.Location = New System.Drawing.Point(563, 3)
         Me.CheckBoxConservaSTL.Name = "CheckBoxConservaSTL"
-        Me.CheckBoxConservaSTL.Size = New System.Drawing.Size(74, 33)
+        Me.CheckBoxConservaSTL.Size = New System.Drawing.Size(74, 39)
         Me.CheckBoxConservaSTL.TabIndex = 5
         Me.CheckBoxConservaSTL.Text = "Conserva File STL"
         Me.CheckBoxConservaSTL.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -287,7 +287,7 @@ Partial Class frmMain
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 39)
+        Me.Label3.Size = New System.Drawing.Size(74, 45)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Ugello (mm/10):"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -312,7 +312,7 @@ Partial Class frmMain
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label4.Location = New System.Drawing.Point(643, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 39)
+        Me.Label4.Size = New System.Drawing.Size(74, 45)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Ignora i prima segmenti :"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
