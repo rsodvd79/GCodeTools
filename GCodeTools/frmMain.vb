@@ -230,11 +230,28 @@ Public Class frmMain
                 IO.File.WriteAllText(FileSCAD, Scad)
                 RaiseEvent Rapporto(Me, New ProcessoEventArgs($"{FileSCAD} > Elaboro"))
 
+                Dim FileExe As String = "C:\Program Files\OpenSCAD\openscad.exe"
+
+                If Not IO.File.Exists(FileExe) Then
+                    FileExe = "C:\Program Files (x86)\OpenSCAD\openscad.exe"
+
+                    If Not IO.File.Exists(FileExe) Then
+                        FileExe = IO.Path.Combine(My.Application.Info.DirectoryPath, "openscad.exe")
+
+                        If Not IO.File.Exists(FileExe) Then
+                            RaiseEvent Rapporto(Me, New ProcessoEventArgs($"{FileSCAD} > '{FileExe}' non trovato"))
+                            Exit Sub
+                        End If
+
+                    End If
+
+                End If
+
                 Processo = New Process With {
                     .EnableRaisingEvents = True
                 }
 
-                Processo.StartInfo.FileName = "C:\Program Files\OpenSCAD\openscad.exe"
+                Processo.StartInfo.FileName = FileExe
                 Processo.StartInfo.Arguments = $"-o ""{FileStl}"" ""{FileSCAD}"""
                 Processo.StartInfo.UseShellExecute = False
                 Processo.StartInfo.RedirectStandardOutput = True
